@@ -96,6 +96,32 @@ app.post('/api/npctype/:id/chars', (req,res, next)=>{
 
 
 
+app.delete('/api/npctype/:id/chars/:charid/', (req,res, next)=>{
+    console.log(req.method);
+    const typeId = parseInt(req.params.id);
+    const charId = parseInt(req.params.charid);
+    // checks if the path has proper numbers
+    if (Number.isNaN(typeId) || Number.isNaN(charId)) {
+        console.log('Error Not Found');
+        return res.status(404).send('Error Not Found');
+    } else {
+        pool.query('DELETE FROM npc_char WHERE id = $1 RETURNING *;', [charId], (err, result)=>{
+            if (err){
+                return next(err);
+            }
+            let delChar = result.rows[0];
+            // checks if character is in the database
+            if (delChar){
+                console.log(delChar);
+                res.status(200).send(delChar);
+            } else {
+                console.log('Character not found');
+                res.status(404).send('Error not found');
+            }
+        })
+    }
+})
+
 app.use((err,req,res,next)=>{
     console.log('Error sent to middleware')
     res.status(500).send('Internal Error');
