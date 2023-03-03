@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+}
+
+div {
+    margin-bottom: 50px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    border: 3px white;
+    margin-bottom: 5px;
+    
+}
+
+p {
+    color: white;
+    text-align: center;
+    border: 3px white;
+    margin-top: 0px;
+
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px white;
+    padding: 20px;
+}
