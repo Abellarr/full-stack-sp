@@ -2,6 +2,9 @@ const { Pool } = require('pg');
 const DATABASE_URL = process.env.DATABASE_URL;
 const pool = require('./connectDB.js');
 
+
+
+
 pool.query(`DROP TABLE IF EXISTS npc_type`, (err, data)=>{
     if (err){
         console.log('Drop NPC Type Table failed')

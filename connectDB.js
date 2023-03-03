@@ -14,7 +14,7 @@ const dbConfig = {
     port: 5432,
 };
 
-let pool = null;
+let pool;
 if (DATABASE_URL){
     pool = new Pool({
         connectionString: process.env.DATABASE_URL,
