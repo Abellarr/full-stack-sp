@@ -1,4 +1,5 @@
 node_modules
 docker-compose.yaml
 Dockerfile
-
+migration.sql
+seed.sql

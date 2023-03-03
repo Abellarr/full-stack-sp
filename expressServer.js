@@ -3,17 +3,19 @@ const app = express();
 const fs = require('fs');
 const { Pool } = require('pg');
 const cors = require('cors');
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(cors());
 
-const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'npcchar',
-    password: 'dnd5e',
-    port: 5432,
-})
+const pool = require('./connectDB.js');
+
+// const pool = new Pool({
+//     user: 'postgres',
+//     host: 'localhost',
+//     database: 'npcchar',
+//     password: 'dnd5e',
+//     port: 5432,
+// })
 
 // GET request: Returns info to client for all characters regardless of type
 app.get('/api/npctype/all/chars', (req,res, next)=>{
