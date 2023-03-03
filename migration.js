@@ -34,7 +34,7 @@ pool.query(`CREATE TABLE npc_type (
 
 pool.query(`CREATE TABLE npc_char (
     id serial PRIMARY KEY,
-    char_name text
+    char_name text,
     race varchar(30),
     class varchar(50),
     hit_points integer,
