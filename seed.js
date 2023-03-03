@@ -3,7 +3,7 @@ const DATABASE_URL = process.env.DATABASE_URL;
 const pool = require('./connectDB.js');
 
 
-pool.query(`INSERT INTO npc_type (npc_type) VALUES ('Combat'), ('Commoner'), ('Nobility'), ('Big Bad Boss'), ('Quest Contact'), ('Patron');`, (err, data)=>{
+pool.query(`INSERT INTO npc_type (npc_type) VALUES ('Combat'), ('Commoner'), ('Nobility'), ('Big Bad Boss'), ('Quest Contact'), ('Patron')`, (err, data)=>{
     if (err){
         console.log('NPC Type Seed failed')
     } else {
@@ -27,7 +27,7 @@ pool.query(`INSERT INTO npc_char (char_name, race, class, hit_points, background
     ('Gnarthon', 'Ogre', 'Fighter', 160, 'Soldier', 4),
     ('Reginald', 'Halfling', 'Rogue', 60, 'Harper Agent', 5),
     ('Calenor', 'Half-Elf', 'Cleric', 75, 'Acolyte', 5),
-    ('Balgethron', 'Drow Elf', 'Wizard', 175, 'Red Wizard', 6);`, (err, data)=>{
+    ('Balgethron', 'Drow Elf', 'Wizard', 175, 'Red Wizard', 6)`, (err, data)=>{
     if (err){
         console.log('NPC Char Seed failed');
     } else {
