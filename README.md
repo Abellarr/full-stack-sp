@@ -1,5 +1,5 @@
 # full-stack-sp
-First attempt at making a full stack application. Very basic, just learning how to put all the front-end and back-end pieces together.
+This is my first attempt at making a full stack application. It is pretty basic, as I'm just learning how to put all the front-end and back-end pieces together.
 
 First, a little bit about me. I am a lover of almost all things Dungeons and Dragons. I've been a player, a DM, and a guide for new players many times throughout the years. I first started playing on 2nd edition in high school and have continued with every edition through 5th. I have enormous passion for the game and would love to one day weave that passion with my growing programming skills to deliver an outstanding product to the DnD community.
 
