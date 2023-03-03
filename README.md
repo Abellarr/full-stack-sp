@@ -6,7 +6,9 @@ First, a little bit about me. I am a lover of almost all things Dungeons and Dra
 The purpose of the stack is to create an API that will store basic information for Dungeon Masters (DMs) to use for creating and storing NPC characters for their campaigns in Dungeons and Dragons. This API does not fall under the OGL from Wizards of the Coast and the content is not from the System Reference Document. This is a free program that I am testing for personal use only and I receive no compensation for any material or service provided here.
 
 I started by drawing out an ERD for my database and tables, and diagramming the information flow from client to server to database:
+
 ![ERD and Route Flow](./Full-Stack-SP-ERD-and-Route-Flow.png)
+
 For now, the tables are somewhat basic and limited, but, as my experience grows, I want to grow the capability of my database as well.
 
 Once I established how I wanted to map my tables, I set up my postgreSQL server through Docker and did some tests to make sure they were communicating.
