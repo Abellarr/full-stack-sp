@@ -1,12 +1,13 @@
+DROP TABLE IF EXISTS npc_type;
+DROP TABLE IF EXISTS npc_char;
 
-
-CREATE TABLE IF NOT EXISTS npc_type (
+CREATE TABLE npc_type (
     id SERIAL PRIMARY KEY,
     npc_type TEXT
 );
 
 
-CREATE TABLE IF NOT EXISTS npc_char (
+CREATE TABLE  npc_char (
     id SERIAL PRIMARY KEY,
     char_name TEXT,
     race VARCHAR(30),
